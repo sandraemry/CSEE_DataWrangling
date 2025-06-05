@@ -10,7 +10,7 @@
 # SITE SETTINGS
 #
 # title appears in the header
-title: workshop-template-b
+title: Data Wrangling 101
 # title-icon appears in the header to give some pizazz (leave blank for none)
 # choose from Bootstrap Icons in _includes/bootstrap-icons
 # find names on https://icons.getbootstrap.com/
@@ -18,8 +18,8 @@ title: workshop-template-b
 title-icon: code-slash
 # description, keywords, and image for meta tags
 # these do not visibility appear on the pages, but used for SEO
-description: "Create a workshop website quick and easy!"
-keywords: "workshops, websites, gh-pages, jekyll"
+description: "This website hosts workshop materials for Data Wrangling 101, taught at CSEE 2025"
+keywords: ""
 # featured-image is added to metadata tags for social media sharing
 # use a relative path to image in this repository or full URL
 featured-image: "/images/uidaho-workshop.jpg"
@@ -27,13 +27,13 @@ featured-image: "/images/uidaho-workshop.jpg"
 search: true
 
 # author settings for cc-by, appears in the footer and credits
-author: evan will
+author: Dr. Sandra Emry
 # your github username for link [optional]
-github_username: evanwill
+github_username: sandraemry
 # year or date published
-pub_year: 2021
+pub_year: 2025
 # location of code, the full url to your github repository
-source-code: https://github.com/evanwill/workshop-template-b
+source-code: https://github.com/sandraemry/CSEE_DataWrangling
 
 ##########
 # URL VARIABLES [optional!!]
