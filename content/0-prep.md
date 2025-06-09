@@ -1,6 +1,7 @@
 ---
 layout: default
 title: Workshop Prep
+nav: Prep
 permalink: /prep/
 ---
 

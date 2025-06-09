@@ -1,7 +1,6 @@
 ---
-title: Get Started
-nav: Start
-topics: Template; Basic Config
+title: (2) Data Validation
+nav: (2) Data Validation
 ---
 
 The [workshop-template-b repository](https://github.com/evanwill/workshop-template-b) is a template project --> to get started quickly, make a copy and replace the demo with your own content and customizations.
