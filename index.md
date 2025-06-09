@@ -3,19 +3,17 @@ title: Home
 layout: page
 ---
 
-# Bootstrap Workshop Template!
+# Data Wrangling 101
 
-{% include figure.html img="uidaho-workshop.jpg" alt="intro image here" caption="Library workshop" width="75%" %}
+{% include figure.html img="data_tidy.jpg" alt="intro image here" caption="credit: Allison Horst" width="75%" %}
 
-A minimal Jekyll theme with Bootstrap for creating workshop websites.
+This website hosts all prep, code, and resources for the data wrangling workshop given by Dr. Sandra Emry and Dr. David Hunt at CSEE 2025. 
 
-*Add your workshop abstract here!*
+For participants of this workshop, please click on the **Prep** menubar prior to the workshop and work through the steps given.  
 
-Learn how to create a super quick easy website for a workshop by writing a few markdown files! 
-Host it for free on GitHub with gh-pages, and share!
-Fun!
+If you need help or have any questions, please contact Sandra at emry@zoology.ubc.ca  
 
-*See also:* [workshop-template](https://evanwill.github.io/workshop-template/), original minimal version.
+See you all soon!  
 
 {% include toc.html %}
 
