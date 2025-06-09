@@ -1,6 +1,6 @@
 ---
 title: (2) Data Validation
-nav: (2) Data Validation
+nav: Validation
 ---
 
 The [workshop-template-b repository](https://github.com/evanwill/workshop-template-b) is a template project --> to get started quickly, make a copy and replace the demo with your own content and customizations.
