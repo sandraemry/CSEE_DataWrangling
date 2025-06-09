@@ -21,7 +21,7 @@
 <div class="card-body">
 {% if include.title %}<h5 class="card-title">{{ include.title }}</h5>{% endif %}
 <div class="card-text">
-{{ include.text | markdownify }}
+{{ include.text | strip_newlines }}
 </div>
 </div>
 </div>
