@@ -63,7 +63,7 @@ baseurl:
 # Defaults to simplify front matter
 defaults:
   - scope:
-      path: "content"
+      path: "pages"
     values:
       layout: "section"
 # ignore stuff
