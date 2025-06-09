@@ -1,6 +1,6 @@
 ---
 layout: default
-title: (1) Data Manipulation
+title: Data Manipulation
 nav: Manipulation
 permalink: /manipulation/
 ---
