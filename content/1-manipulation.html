@@ -353,44 +353,92 @@ display: none;
 </div>
 
 
-<p><code>workshop-template-b</code> is a Jekyll project to create a
-simple workshop website, with a <a href="https://getbootstrap.com/">Bootstrap</a>-based theme, designed for
-hosting on <a href="https://pages.github.com/">GitHub Pages</a> (or
-similar static web options!).</p>
-<p>It works best for about five pages of instructions, plus home page,
-all written in Markdown. The navigation to the main pages is exposed at
-top and bottom of each page for easy stepping through the lessons.</p>
-<div id="why" class="section level3">
-<h3>Why?</h3>
-<p>Rather than making slides for a workshop, why not make a website?
-It’s easier to write, access, share, and reuse. GitHub and GitHub Pages
-makes this pretty easy.</p>
-<p>It is a great <a href="https://en.wikipedia.org/wiki/Open_educational_resources">Open
-Educational Resource</a> since anyone can make a copy and adapt!</p>
+<p>Before we can begin to analyse our data, we often need to re-format
+our data to get into the right ‘shape’ for computers to read. Often
+humans enter data that is readable by us, but this format is not
+readable by computers.</p>
+<p>Click here to find the <a href="https://docs.google.com/presentation/d/1n3HJEGCP1tk4_XDXmdY8GalbZSj6kgko6MwzW2BwC5M/edit?usp=sharing">slides</a>
+that we went through at the start of the workshop</p>
+<div id="basics" class="section level3">
+<h3>Basics</h3>
+<p><strong>Getting data into R</strong></p>
+<p>I prefer to use <code>read_csv</code> from <code>readr</code> package
+as it … but many prefer to use read.csv instead. There are many ways of
+achieving the same thing in R so don’t feel like you need to change what
+you’re doing if it works for you! Whichever function you use, refrain
+from reading in data with a ‘point and click’ method, as this is not
+reproducible, and can’t be easily used by someone else who wants to be
+able to run your code.</p>
+<p>If you are reading in your own file, you could do it like so. Make
+sure you change the file path and file name.</p>
+<pre class="r"><code>data  &lt;- read_csv(&quot;./00_rawdata/rawdatafile.csv&quot;)</code></pre>
+<p>For the first part of our workshop, we are going to use the data from
+the <code>palmerpenguins</code> package. You can access the dataset by
+typing <code>penguins</code></p>
+<pre class="r"><code>library(palmerpenguins)</code></pre>
+<p><strong>Getting to know your data</strong></p>
+<p>Their are lots of functions that help you learn about your data. Here
+are a few that I often use:<br />
+Here are two great functions, one from <code>dplyr</code> and one from
+base R, to see which variables you have in your dataset, and the
+structure for each</p>
+<pre class="r"><code>glimpse(penguins)
+str(penguins)</code></pre>
+<p>You can also view parts of your dataset:</p>
+<pre class="r"><code>head(penguins)
+tail(penguins)
+penguins[1:20, ]</code></pre>
+<p>And learn the dimensions of your data:</p>
+<pre class="r"><code>nrow(penguins)
+ncol(penguins)
+dim(penguins)</code></pre>
 </div>
-<div id="github-pages" class="section level2">
-<h2>GitHub Pages</h2>
-<p>One amazingly useful GitHub feature is <a href="https://guides.github.com/features/pages/">GitHub Pages</a>. It
-provides free static web hosting from any repository. GH-Pages is
-intended to host relatively simple sites for your GitHub portfolio,
-project, or documentation. Because it is free and a valuable
-transferable skill, this is a great option for teaching and
-learning.</p>
-<p>Many organizations are using GitHub to collaboratively create and
-publish public workshop websites. For example:</p>
-<ul>
-<li><a href="http://programminghistorian.org/">Programming
-Historian</a></li>
-<li><a href="https://software-carpentry.org/">Software Carpentry</a>, <a href="http://www.datacarpentry.org/">Data Carpentry</a>, <a href="https://librarycarpentry.org/">Library Carpentry</a></li>
-<li>this site!</li>
-</ul>
-<p>{% capture text %}Note: There are <em>soft</em> limits and guidelines
-for gh-pages usage: sites should be &lt; 1GB, use &lt; 100GB bandwidth
-per month, and make &lt; 10 builds per hour. If your site exceeds these
-quotas, GitHub will send you a notice asking you to modify the
-repository. All content must follow the <a href="https://help.github.com/articles/github-community-guidelines/">community
-guidelines</a>, e.g. no violence, obscene sex, or illegal stuff.{%
-endcapture %} {% include alert.html text=text color=secondary %}</p>
+<div id="wrangling" class="section level3">
+<h3>Wrangling</h3>
+<div id="subsetting" class="section level4">
+<h4>Subsetting</h4>
+<p>If you want to work with only a few columns, you can use
+<code>select</code> to retain only the named columns like so:</p>
+<pre class="r"><code>penguins |&gt; select(species, island, bill_length_mm, bill_depth_mm)</code></pre>
+<p>It’s important to note that we didn’t save this subsetted dataset in
+our global environment yet. We would need to do so like this:</p>
+<pre class="r"><code>penguin_subset &lt;- penguins |&gt; select(species, island, bill_length_mm, bill_depth_mm)</code></pre>
+<p>You can also subset by excluding named columns:</p>
+<pre class="r"><code>penguins |&gt; select(-c(sex, year))</code></pre>
+<p>Or by selecting columns that follow one another like this:</p>
+<pre class="r"><code>penguins |&gt; select(species:body_mass_g)</code></pre>
+<p>Using select will always give you a dataframe with the same number of
+rows, but fewer columns.</p>
+<p>Alternatively, we also subset our data with the function
+<code>filter</code>. This function only keeps certain rows based on the
+criteria we provide. For example, we can keep only the data containing
+female penguins:</p>
+<pre class="r"><code>penguins_female &lt;- pengions |&gt; filter(sex == &quot;female&quot;)</code></pre>
+<p>Or we can only keep penguins with a bill length greater than 40
+mm</p>
+<pre class="r"><code>penguins_female |&gt; filter(bill_length_mm &gt; 40)</code></pre>
+<p>Filter will always give you a dataframe with fewer rows, but the same
+number of columns.</p>
+</div>
+<div id="summarizing" class="section level4">
+<h4>Summarizing</h4>
+<p><strong>grouping</strong></p>
+<p>In the previous step we filtered based off an arbitrary number (40
+mm), but let’s say we wanted to filter based on the mean bill length of
+females. We can first calculate the mean bill length of both males and
+females by grouping our data into two (male and female) and then
+summarizing the data.</p>
+<pre class="r"><code>penguins |&gt; 
+  group_by(sex) |&gt; 
+  summarise(mean_bill_length_mm = mean(bill_length_mm))</code></pre>
+</div>
+<div id="manipulating" class="section level4">
+<h4>Manipulating</h4>
+<p><strong>mutate</strong></p>
+<p><strong>pivots</strong></p>
+<p><strong>separate and unite</strong></p>
+<p><strong>joins</strong></p>
+</div>
 </div>
 
 
