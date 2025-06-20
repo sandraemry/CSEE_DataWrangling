@@ -50,7 +50,8 @@ These packages can be installed by typing into RStudio's console: `install packa
   * `forcats`  
 * `palmerpenguins`  
 * `assertr`  
-* `lubridate`  
+* `lubridate` 
+* `Lahman`
 
 ### Workshop structure
 
