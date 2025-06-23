@@ -6,7 +6,7 @@ permalink: /manipulation/
 
 Before we can begin to analyse our data, we often need to re-format our data to get into the right 'shape' for computers to read. Often humans enter data that is readable by us, but this format is not readable by computers. 
 
-Click here to find the [slides](https://docs.google.com/presentation/d/1n3HJEGCP1tk4_XDXmdY8GalbZSj6kgko6MwzW2BwC5M/edit?usp=sharing) that we went through at the start of the workshop.
+👉 [Slides from the workshop](https://docs.google.com/presentation/d/1n3HJEGCP1tk4_XDXmdY8GalbZSj6kgko6MwzW2BwC5M/edit?usp=sharing)
 
 ### Basics
 
@@ -32,7 +32,15 @@ Their are lots of functions that help you learn about your data. Here are a few 
 Learn the dimensions of your data: 
 ```r
 nrow(penguins)
+```
+
+``` r
+# [1] 344
+```
+
+```r
 ncol(penguins)
+
 dim(penguins)
 ```
 
