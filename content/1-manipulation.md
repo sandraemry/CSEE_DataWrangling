@@ -40,17 +40,62 @@ nrow(penguins)
 
 ```r
 ncol(penguins)
-
+```
+```r
+#[1] 8
+```
+```r
 dim(penguins)
 ```
-
+```r
+[1] 344   8
+```
 You can also view parts of your dataset: 
 ```r
 head(penguins)
+```
+```r
+# # A tibble: 6 × 8
+#   species island    bill_length_mm bill_depth_mm flipper_length_mm body_mass_g sex    year
+#   <fct>   <fct>              <dbl>         <dbl>             <int>       <int> <fct> <int>
+# 1 Adelie  Torgersen           39.1          18.7               181        3750 male   2007
+# 2 Adelie  Torgersen           39.5          17.4               186        3800 fema…  2007
+# 3 Adelie  Torgersen           40.3          18                 195        3250 fema…  2007
+# 4 Adelie  Torgersen           NA            NA                  NA          NA NA     2007
+# 5 Adelie  Torgersen           36.7          19.3               193        3450 fema…  2007
+# 6 Adelie  Torgersen           39.3          20.6               190        3650 male   2007
+```
+```r
 tail(penguins)
+```
+```r
+# # A tibble: 6 × 8
+#   species   island bill_length_mm bill_depth_mm flipper_length_mm body_mass_g sex     year
+#   <fct>     <fct>           <dbl>         <dbl>             <int>       <int> <fct>  <int>
+# 1 Chinstrap Dream            45.7          17                 195        3650 female  2009
+# 2 Chinstrap Dream            55.8          19.8               207        4000 male    2009
+# 3 Chinstrap Dream            43.5          18.1               202        3400 female  2009
+# 4 Chinstrap Dream            49.6          18.2               193        3775 male    2009
+# 5 Chinstrap Dream            50.8          19                 210        4100 male    2009
+# 6 Chinstrap Dream            50.2          18.7               198        3775 female  2009
+```
+```r
 penguins[1:20, ]
+```
+```r
+
+```
+```r
 print(penguins)
+```
+```r
+
+```
+```r
 print(penguins, n = 20)
+```
+```r
+
 ```
 
 Here are two great functions, one from `dplyr` and one from base R, to see which variables you have in your dataset, and the structure for each 
