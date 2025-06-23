@@ -3,72 +3,92 @@ title: Reference & Resources
 nav: Resources
 ---
 
-To learn about using `workshop-template-b`, the content pages of this demo provide documentation and examples (also check the [README](https://github.com/evanwill/workshop-template-b/blob/master/README.md)).
+## Data import and export 
+### Written
+- [Loading and saving data in R | Hands on Programming with R](https://rstudio-education.github.io/hopr/dataio.html#plain-text-files)
+### Video 
+- [Data import in R: best practices](https://www.youtube.com/watch?v=dsl3bT1zrNQ)
+- [Exporting data in R](https://www.youtube.com/watch?v=M3LhpXus5m0)
+### Reference Sheets
+- [Data import with the tidyverse :: CHEATSHEET](https://rstudio.github.io/cheatsheets/data-import.pdf)
 
-Workshop sites using this template:
+## Data types and structures
+### Written
+- [Data types | An Introduction to R](https://intro2r.com/data-types.html)
+- [Data structures | An Introduction to R](https://intro2r.com/data-structures.html)
+- [The Ultimate Opinionated Guide to Base R Date Format Functions | R-bloggers](https://www.r-bloggers.com/2019/04/the-ultimate-opinionated-guide-to-base-r-date-format-functions/)
+- [A Comprehensive Introduction to Handling Date & Time in R | R-bloggers (tidyverse)](https://www.r-bloggers.com/2020/04/a-comprehensive-introduction-to-handling-date-time-in-r/)
+### Video
+- [6 data types of R](https://www.youtube.com/watch?v=HhYUemO87Cs)
+- [Vectors, matrices and arrays, dataframes, tibbles](https://www.youtube.com/watch?v=ERdsFVx0NKw)
+- [str() function](https://www.youtube.com/watch?v=DYgGMPFECfU)
+### Reference Sheets
+- [Dates and times with lubridate : : CHEATSHEET](https://rawgit.com/rstudio/cheatsheets/main/lubridate.pdf)
 
-- [Demo](https://evanwill.github.io/workshop-template-b/) (this repository)
-- [Go Go GitHub Pages (v.2)](https://evanwill.github.io/go-go-ghpages-b/) (workshop)
-- [Get Started with OpenRefine](https://evanwill.github.io/openrefine-b/) (workshop)
-- [Web Crash Course](https://evanwill.github.io/web-crash-course/) (workshop)
-- [write-md: Markdown and Pandoc for Academic Writing](https://evanwill.github.io/write-md/) (workshop)
-- [web-cites: Web Archiving to Fight Link Rot and Preserve Your Citations](https://evanwill.github.io/web-cites/) (workshop)
-- [Hey API!](https://evanwill.github.io/hey-api/) (workshop)
-- [Web Crash Course](https://evanwill.github.io/web-crash-course/) (workshop)
-- [Try Linux!](https://evanwill.github.io/try-linux/) (workshop)
-- [Make OER!](https://evanwill.github.io/make-oer/) (presentation)
-- [Teaching Tech Hands-on](https://evanwill.github.io/tech-hands-on/) (presentation)
+## General best practices in coding
+### Written
+- [Organizing data in spreadsheets](https://kbroman.org/dataorg/)
+### Reference Sheets
+- [Best Practice for R : : CHEAT SHEET](https://rstudio.github.io/cheatsheets/R-best-practice.pdf)
 
-Other workshop sites an [minimal version of this template](https://github.com/evanwill/workshop-template) (no bootstrap):
+### Operators
+## Written
+- [R Operators (With Examples)](https://www.datamentor.io/r-programming/operator)
+## Video
+- [Logical operators](https://www.youtube.com/watch?v=31El3vGcG58)
+- [%in% operator](https://www.youtube.com/watch?v=uuS0YpUTkmk)
+- [%>% (pipe) operator](https://www.youtube.com/watch?v=Stt3qEuIeso)
+- [Slicing operator](https://www.youtube.com/watch?v=GdcbKkm99q4)
+- [which() function](https://www.youtube.com/watch?v=7piMY-WvyDI)
+## Reference Sheets
+- [Getting Started with R :: CHEATSHEET](https://images.datacamp.com/image/upload/v1697642178/Marketing/Blog/R_Cheat_Sheet_PNG_1.pdf)
 
-- [get-git](https://evanwill.github.io/get-git/)
-- [hello-arduino](https://evanwill.github.io/hello-arduino/)
-- [clean-your-data](https://evanwill.github.io/clean-your-data/)
-- [go-go gh-pages](https://evanwill.github.io/go-go-ghpages/)
-- [Make @ the MILL](https://uidaholib.github.io/make-at-the-mill/)
+### Summarizing data
+## Written
+- [Summarising data frames | An Introduction to R (base)](https://intro2r.com/summarising-data-frames.html)
+- [The Complete Guide: How to Group & Summarize Data in R (tidyverse)](https://www.statology.org/group-summarize-data-r/)
+## Video
+- [Using base R](https://www.youtube.com/watch?v=8XFmPP93w_Y)
+- [Using tidyverse](https://www.youtube.com/watch?v=byFVvmJpv0E)
+## Reference Sheets
+- [Data transformation with dplyr : : CHEATSHEET](https://rstudio.github.io/cheatsheets/data-transformation.pdf)
 
-If you need a Bootstrap 4 version, see older [v1.0 release](https://github.com/evanwill/workshop-template-b/releases/tag/v1.0). 
+### Subsetting data
+## Written
+- [How to Subset a Data Frame in R (4 Examples)](https://www.statology.org/subset-data-frame-in-r/)
+## Video
+- [Subset data with base R](https://www.youtube.com/watch?v=T9wDXLkDJVw)
+- [Subset data with tidyverse](https://www.youtube.com/watch?v=pU10ghMvAuM)
+## Reference Sheets
+- [Data transformation with dplyr : : CHEATSHEET](https://rstudio.github.io/cheatsheets/data-transformation.pdf)
 
-# Reference
+### Merging and combining data frames
+## Written
+- [How to merge data in R using R merge, dplyr, or data.table | InfoWorld]()
+- [How To Merge Two R Data Frames - ProgrammingR]()
+## Video
+- [Binding rows and columns with base R]()
+- [Binding rows and columns with tidyverse]()
+- [Merging data frames with base R]()
+- [Merging data frames with tidyverse: left_join(), other kinds of join() part 1 and part 2]()
+## Reference Sheets
+- [Data transformation with dplyr : : CHEATSHEET]()
 
-## Git & GitHub
+### Regular Expressions (aka regex or grep)
+## Written
+- [A Guide to R Regular Expressions With Examples | DataCamp](https://www.datacamp.com/tutorial/regex-r-regular-expressions-guide)
+## Video
+- [R tutorial: Regular expression basics](https://www.youtube.com/watch?v=Jr_2GlvrTCA)
+- [Working with Regular Expressions Using StringR in R](https://www.youtube.com/watch?v=_DXSHUN0Vcc)
+## Reference Sheets
+- [Basic Regular Expressions in R :: CHEATSHEET](https://rstudio.github.io/cheatsheets/regex.pdf)
+- [String manipulation with stringr : : CHEAT SHEET](https://rstudio.github.io/cheatsheets/strings.pdf)
 
-[GitHub](https://github.com/) is a popular web service for hosting Git repositories--with benefits!
-It provides a handy web interface for editing and collaborating on repos, as well as, built in project management features and [free static web hosting](https://pages.github.com/) powered by [Jekyll](https://jekyllrb.com/).
-Accounts are free.
-To learn more check out Hello World on [GitHub Guides](https://guides.github.com/) or [GitHub Learning Lab](https://lab.github.com/).
-
-## Markdown
-
-[Markdown](https://daringfireball.net/projects/markdown/) is a standard to simplify writing content for the web. 
-Markdown can be used any where on GitHub and in Jekyll.
-
-- [Mastering Markdown GitHub Guide](https://guides.github.com/features/mastering-markdown/){:target="_blank" rel="noopener"}
-- [GitHub Markdown documentation](https://docs.github.com/en/free-pro-team@latest/github/writing-on-github/basic-writing-and-formatting-syntax){:target="_blank" rel="noopener"}
-- [Markdown in a Minute](https://evanwill.github.io/_drafts/notes/markdown-minute.html)
-
-## Bootstrap 5
-
-[Bootstrap](https://getbootstrap.com/) is a CSS framework designed to streamline developing user interfaces for your website.
-
-[Bootstrap Icons](https://icons.getbootstrap.com/) are SVG-based icon set used to add graphics to your content.
-
-## YAML
-
-[YAML](http://www.yaml.org/) is a human readable plain text data format.
-It is used in Jekyll for configuration, site data, and front matter.
-Jekyll projects are [configured](https://jekyllrb.com/docs/configuration/) using the "_config.yml" file.
-
-## Liquid
-
-[Liquid](http://shopify.github.io/liquid/) is a flexible template language.
-[In Jekyll]((https://jekyllrb.com/docs/liquid/) it allows you to layout pages built from modular components and data, using the "_includes", "_layouts", and "_data" directories.
-Liquid includes features such as operators, loops, and filters to manipulate raw content. 
-Liquid statements are enclosed by {% raw %}`{%  %}`{% endraw %} and variables in {% raw %}`{{  }}`{% endraw %}.
-
-## Sass  
-
-[Sass](http://sass-lang.com/) is a CSS extension / preprocessor. 
-All normal CSS is valid SCSS, but Sass adds many powerful functions and programmatic features. 
-Writing SCSS is often easier and more sensible, for example by supporting nesting, variables, and operators. 
-Jekyll lets you write SASS in modular chucks called partials, in the "_sass" directory, that will be combined and compiled into normal CSS files when the site is built.
+### Data tidying and reorganization]()
+## Written
+- [Tidy data • tidyr](https://tidyr.tidyverse.org/articles/tidy-data.html)
+## Video
+- [Pivot longer](https://www.youtube.com/watch?v=xOipLOxGrzU) and [pivot wider](https://www.youtube.com/watch?v=YpAdZ4079qs)
+## Reference Sheets
+- [Data tidying with tidyr : : CHEATSHEET](https://rstudio.github.io/cheatsheets/tidyr.pdf)
+- [Data transformation with dplyr : : CHEATSHEET](https://rstudio.github.io/cheatsheets/data-transformation.pdf)
