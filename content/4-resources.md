@@ -5,10 +5,10 @@ nav: Resources
 
 ### Data import and export 
 **Written**
-- [Loading and saving data in R | Hands on Programming with R](https://rstudio-education.github.io/hopr/dataio.html#plain-text-files)
+- [Loading and saving data in R - Hands on Programming with R](https://rstudio-education.github.io/hopr/dataio.html#plain-text-files)  
 **Video** 
 - [Data import in R: best practices](https://www.youtube.com/watch?v=dsl3bT1zrNQ)
-- [Exporting data in R](https://www.youtube.com/watch?v=M3LhpXus5m0)  
+- [Exporting data in R](https://www.youtube.com/watch?v=M3LhpXus5m0)   
 **Reference Sheets**
 - [Data import with the tidyverse :: CHEATSHEET](https://rstudio.github.io/cheatsheets/data-import.pdf)
 
