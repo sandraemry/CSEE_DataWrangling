@@ -29,6 +29,7 @@ Include code:
 2. Use data from your supervisor.
 3. Clean the crowd-sourced data.
 4. Transform `penguins_raw` to `penguins`.
+5. Catch all the erros in the `messy_penguins` dataset. 
 {% endcapture %}
 {% include card.html text=text header="Skills Application" img="tidy_icecream.jpg" %}{% endraw %}
 ```

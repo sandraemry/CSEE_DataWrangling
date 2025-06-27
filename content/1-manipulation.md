@@ -89,7 +89,7 @@ Now we see it's a factor and it sorts properly. This can be very helpful when pl
 
 Now back to penguins...
 
-Before we can wrangle, let's learn what the pipe is all about. There are two pipes in r and you can use either: %>% or |> 
+Before we can wrangle, let's learn what the pipe is all about. There are two pipes in r and you can use either: %>% or  %>% %>% %>% %>%  
 There is a keyboard shortcut for the pipe so you don't have to type it out each time, for Macs: Cmd + Shift + M and on windows: Ctrl + Shift + M
 
 ############### PIPE ############### 
@@ -128,34 +128,34 @@ We are going to use this pipe for the remainder of the workshop.
 
 The function select is always going to return the same number of rows but fewer columns. If you want to work with only a few columns, you can use `select` to retain only the named columns like so: 
 ```r
-penguins |> 
+penguins %>% 
   select(species, sex, bill_length_mm)
 ```
 
 Note that we didn't save this subsetted dataset in our global environment yet. We would need to do so like this: 
 **Tip**: Never overwrite the original DF 
 ```r
-penguins_select <- penguins |> 
+penguins_select <- penguins %>% 
   select(species, sex, bill_length_mm)
 ```
 
 Use : to select many consecutive cols at once 
 ```r
-penguins |> 
+penguins %>% 
   select(species:body_mass_g)
 ```
 
 You can also subset by excluding named columns: 
 ```r 
-penguins |> 
+penguins %>% 
   select(!c(body_mass_g))
 ```
  Other ways to subset: 
 ```r 
-penguins |> 
+penguins %>% 
   select(starts_with("bill"))
 
-penguins |> 
+penguins %>% 
   select(where(is.numeric))
 ```
 
@@ -166,26 +166,26 @@ Alternatively, we also subset our data with the function `filter`. This function
 For example, we can keep only the data containing female penguins: 
 
 ```r
-penguins_female <- pengions |> filter(sex == "female")
+penguins_female <- pengions %>% filter(sex == "female")
 ```
 
 Or we can only keep penguins with a numeric column greater or smaller than a certain number 
 ```r
-penguins_female |> filter(bill_length_mm > 40)
+penguins_female %>% filter(bill_length_mm > 40)
 
-penguins |> 
+penguins %>% 
   filter(bill_depth_mm > 19 & bill_depth_mm <= 20)
 ```
 
 ```r
-penguins |> 
+penguins %>% 
   filter(species %in% c("Chinstrap", "Gentoo")) 
 ```
 
 Note that there are still three levels in the factor though. Also here's the first time we have more than 1 pipe!
 ```r
-penguins |> 
-  filter(species %in% c("Chinstrap", "Gentoo")) |> 
+penguins %>% 
+  filter(species %in% c("Chinstrap", "Gentoo")) %>% 
   str()  
 ```
 ##### Mutate
@@ -193,7 +193,7 @@ Mutate will return the same number of rows with additional columns, by using cer
 
 For exampls, let's calculate the ratio of bill length to bill depth 
 ```r
-penguins |> 
+penguins %>% 
   mutate(length_depth_ratio = bill_length_mm/bill_depth_mm)
 ```
 ##### Arrange
@@ -202,16 +202,16 @@ Arrange will order rows based on values of selected columns.
 
 The default is to sort from smallest to largest, but we can change this with 'desc'
 ```r
-penguins |> 
+penguins %>% 
   arrange(bill_length_mm)
 
-penguins |> 
+penguins %>% 
   arrange(desc(bill_length_mm))
 ```
 
 We can also sort by multiple columns. 
 ```r
-penguins |> 
+penguins %>% 
   arrange(sex, year, species, island) 
 ```
 
@@ -222,8 +222,8 @@ penguins |>
 In the previous step we filtered based off an arbitrary number (40 mm), but let's say we wanted to filter based on the mean bill length of females. We can first calculate the mean bill length of both males and females by grouping our data into two (male and female) and then summarizing the data.
 
 ```r
-penguins |> 
-  group_by(sex) |> 
+penguins %>% 
+  group_by(sex) %>% 
   summarise(mean_bill_length_mm = mean(bill_length_mm, na.rm = T))
 ```
 Summarize will always return less rows and columns. The number of rows will be equivalent to your grouping, the number of columns will be equivalent to the number of variables used to grouped and summary data calculated.
@@ -231,9 +231,9 @@ Summarize will always return less rows and columns. The number of rows will be e
 Sometimes you might want to add your calculated row to the same DF, i.e.g not get rid of any rows. For example, if we wanted to filter based on the mean value that we just calculated. We can group_by and mutate instead. 
 
 ```r
-penguins |> 
-  group_by(sex) |> 
-  mutate(mean_bill_length_mm = mean(bill_length_mm, na.rm = T)) |> 
+penguins %>% 
+  group_by(sex) %>% 
+  mutate(mean_bill_length_mm = mean(bill_length_mm, na.rm = T)) %>% 
   filter(bill_length_mm > mean_bill_length_mm)
 ```
 
@@ -241,21 +241,21 @@ penguins |>
 Tally can be very useful when wrangling and summarizing data but also in data validation (more on this later).
 
 ```r
-penguins |> 
-  group_by(species) |> 
+penguins %>% 
+  group_by(species) %>% 
   tally()
 
-penguins |> 
-  group_by(species) |> 
+penguins %>% 
+  group_by(species) %>% 
   add_tally()
 ```
 
 ##### Rename
 
 ```r
-penguins |> 
-  group_by(species) |> 
-  add_tally() |> 
+penguins %>% 
+  group_by(species) %>% 
+  add_tally() %>% 
   rename(sample_size = n)
 ```
 
@@ -263,12 +263,12 @@ penguins |>
 
 I often use these two verbs to create new columns from existing columns. For example, if we wanted to separate the column 'Species' into two columns in the penguin_raw dataframe. 
 ```r
-pen_unite <- penguins |> 
+pen_unite <- penguins %>% 
   unite("species_island", c("species", "island"), sep = "_", remove = T)
 ```
 
 ```r
-pen_unite |> 
+pen_unite %>% 
   separate(col = "species_island", into = c("species", "island"), sep = "_", remove = F)
 ```
 
@@ -306,7 +306,7 @@ dim(People)
 Each of these dataframes have 'playerID' in common. So let's add the additional information about each player to the batting dataframe. 
 How many columns and rows do you expect the resulting df to have?
 ```
-left_join(x = Batting, y = People, by = "playerID") |> dim()
+left_join(x = Batting, y = People, by = "playerID") %>% dim()
 ```
 It should have the same number of rows from Batting. 
 
@@ -316,7 +316,7 @@ players <- People %>%
   filter(playerID %in% c("ruthba01", "bondsba01", "troutmi01")) %>%
   select(playerID, nameFirst, nameLast)
 
-left_join(players, Batting, by = "playerID") |> dim()
+left_join(players, Batting, by = "playerID") %>% dim()
 ```
 
 It's helpful to tell R what you are expecting, and R wiill tell you if you are wrong!
@@ -330,10 +330,10 @@ Often we will enter data, or receive data, in wide format and we need to convert
 
 Let's use the `billboard` dataset from the `tidyr` package. 
 ```r
-billboard |> 
+billboard %>% 
   pivot_longer(cols = wk1:wk76, names_to = "week_no", values_to = "rank")
   
-billboard_long <- billboard |> 
+billboard_long <- billboard %>% 
   pivot_longer(cols = starts_with("wk"), names_to = "week_no", values_to = "rank")
   
 ```
@@ -341,7 +341,7 @@ billboard_long <- billboard |>
 Revert back to wide format: 
 
 ```r
-billboard_long |> 
+billboard_long %>% 
   pivot_wider(names_from = "week_no", values_from = "rank")
 ```
 
