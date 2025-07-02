@@ -45,7 +45,7 @@ nav: Resources
 
 ---
 
-##Operators
+## Operators
 
 **Written**  
 - [R Operators (With Examples)](https://www.datamentor.io/r-programming/operator)
@@ -62,7 +62,7 @@ nav: Resources
 
 ---
 
-##Summarizing Data
+## Summarizing Data
 
 **Written**  
 - [Summarising data frames – An Introduction to R (base)](https://intro2r.com/summarising-data-frames.html)  
@@ -77,7 +77,7 @@ nav: Resources
 
 ---
 
-##Subsetting Data
+## Subsetting Data
 
 **Written**  
 - [How to Subset a Data Frame in R (4 Examples)](https://www.statology.org/subset-data-frame-in-r/)
@@ -91,7 +91,7 @@ nav: Resources
 
 ---
 
-##Merging and Combining Data Frames
+## Merging and Combining Data Frames
 
 **Written**  
 - [Merging in R using `merge()`, `dplyr`, or `data.table` – InfoWorld](https://www.infoworld.com/article/2264570/how-to-merge-data-in-r-using-r-merge-dplyr-or-datatable.html)  
@@ -123,7 +123,7 @@ nav: Resources
 
 ---
 
-##Data Tidying and Reorganization
+## Data Tidying and Reorganization
 
 **Written**  
 - [Tidy data – tidyr](https://tidyr.tidyverse.org/articles/tidy-data.html)
