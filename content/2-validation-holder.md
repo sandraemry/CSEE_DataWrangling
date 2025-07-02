@@ -3,7 +3,7 @@ title: (2) Data Validation
 nav: Validation
 ---
 
-A short blurb on some common ways to validate your data, build in checks to your script to catch common errors
+While you are cleaning your data, you are also going to want to validate, or QA/QC, your data. Data entry errors are common, so we need a reproducible way to catch these. 
 There are lots of ways to tackle this issue. We aren't going to cover plotting in this workshop but I visualizing your data can be hugely helpful in finding typos, extreme values, etc. Today we are going to focus on using the `assertr` package. 
 
 ### QA/QC Checklist for `penguins` Dataset
