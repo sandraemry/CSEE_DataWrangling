@@ -18,8 +18,7 @@ For extra practice with validation, download this purposely messy `penguins` dat
 
 ---------
 
-### Options
 
 {% include card.html 
    header="Options Overview"
-   text="1. Use data from your own research.<br>2. Use data from your supervisor.<br>3. Transform `penguins_raw` to `penguins`.<br>4. Catch all the erros in the `messy_penguins` dataset." %}
+   text="1. Use data from your own research.<br>2. Use data from your supervisor.<br>3. Transform `penguins_raw` to `penguins`.<br>4. Catch all the errors in the `messy_penguins` dataset." %}

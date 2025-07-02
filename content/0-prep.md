@@ -59,13 +59,7 @@ There are three main sections to the workshop. We will first learn some common p
 
 {% include card.html 
    header="Setup Overview"
-   text="
-1. Have R installed  
-2. Have R Studio installed  
-3. Download relevant packages  
-4. *Optional:* Bring a messy data set from your own, or your supervisor's, research to work on  
-" %}
-
+   text="1. Have R installed.<br>2. Have R Studio installed.<br>3. Download relevant packages.<br>4. *Optional:* Bring a messy data set from your own, or your supervisor's, research to work on." %}
 
 
 
