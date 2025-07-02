@@ -9,7 +9,7 @@ There are lots of ways to tackle this issue. We aren't going to cover plotting i
 ### QA/QC Checklist for `penguins` Dataset
 
 <div style="overflow-x:auto;">
-
+  
 | Check # | Validation Rule                                               | Status (✓/✗) | Notes / Fix Action                      |
 |--------:|---------------------------------------------------------------|:------------:|------------------------------------------|
 | 1       | No missing values in `species`, `sex`, `year`                 |              |                                          |
@@ -22,7 +22,7 @@ There are lots of ways to tackle this issue. We aren't going to cover plotting i
 | 8       | Categorical variables are properly formatted (no typos)       |              |                                          |
 | 9       | No negative values in numeric fields                          |              |                                          |
 | 10      | Data types are consistent with variable meaning (e.g. sex = factor) |         |                                          |
-
+  
 </div>
   
 This page will be updated the day of the workshop. 
