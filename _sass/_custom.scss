@@ -1,1 +1,18 @@
-/* add your tweaks here! */
+table {
+  width: 100%;
+  table-layout: auto;
+  display: block;
+  overflow-x: auto;
+  margin-bottom: 1.5rem;
+}
+
+thead {
+  font-weight: bold;
+}
+
+td, th {
+  padding: 0.5rem;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
