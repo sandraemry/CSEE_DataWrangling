@@ -20,14 +20,13 @@ For extra practice with validation, download this purposely messy `penguins` dat
 
 ### Options
 
-Include code:
 
-```{% raw %}
-{% capture text %}
-1. Use data from your own research.
-2. Use data from your supervisor.
-3. Transform `penguins_raw` to `penguins`.
-4. Catch all the erros in the `messy_penguins` dataset. 
-{% endcapture %}
-{% include card.html text=text header="Skills Application" img="tidy_icecream.jpg" %}{% endraw %}
-```
+{% include card.html 
+   header="Options Overview"
+   text="
+1. Use data from your own research.  
+2. Use data from your supervisor.  
+3. Transform `penguins_raw` to `penguins`.  
+4. Catch all the erros in the `messy_penguins` dataset.  
+" %}
+
