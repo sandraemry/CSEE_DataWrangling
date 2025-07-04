@@ -8,7 +8,8 @@ messy_penguins <- penguins %>%
   mutate(
     # Introduce misplaced decimal in flipper_length_mm (e.g., 198 -> 1980)
     flipper_length_mm = case_when(
-      row_number() %% 15 == 0 & !is.na(flipper_length_mm) ~ flipper_length_mm * 10,
+      row_number() == 15 ~ flipper_length_mm * 10,
+      row_number() == 81 ~ flipper_length_mm * 10,
       TRUE ~ flipper_length_mm
     ),
     
@@ -28,27 +29,32 @@ messy_penguins <- penguins %>%
     
     # Illogical bill_length_mm values (shorter than depth)
     bill_length_mm = case_when(
-      row_number() %% 18 == 0 & !is.na(bill_depth_mm) ~ bill_depth_mm - 1,
+      row_number() %% 86 == 0 & !is.na(bill_depth_mm) ~ bill_depth_mm - 1,
       TRUE ~ bill_length_mm
     ),
     
     # Spelling errors in species
     species = case_when(
-      row_number() %% 12 == 0 ~ "Adeliee",
-      row_number() %% 13 == 0 ~ "Gentto",
+      row_number() == 12 ~ "Adeliee",
+      row_number() == 199 ~ "Gentto",
+      row_number() == 327 ~ "Chin Strap",
+      row_number() == 301 ~ "chinstrap",
+      row_number() == 302 ~ "chinstrap",
+      row_number() == 303 ~ "chinstrap",
       TRUE ~ species
     ),
     
     # Spelling errors in island
     island = case_when(
-      row_number() %% 17 == 0 ~ "Dreamm",
+      row_number() == 46 ~ "Dreamm",
+      row_number() == 51 ~ "biscoe",
       TRUE ~ island
     ),
     
     # Spelling errors in sex
     sex = case_when(
-      row_number() %% 14 == 0 ~ "femlae",
-      row_number() %% 16 == 0 ~ "mael",
+      row_number() == 97 ~ "femlae",
+      row_number() == 178 ~ "mael",
       TRUE ~ sex
     )
   )
