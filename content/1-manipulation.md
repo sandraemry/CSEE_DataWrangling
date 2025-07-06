@@ -331,7 +331,6 @@ billboard %>%
   
 billboard_long <- billboard %>% 
   pivot_longer(cols = starts_with("wk"), names_to = "week_no", values_to = "rank")
-  
 ```
 
 Revert back to wide format: 
