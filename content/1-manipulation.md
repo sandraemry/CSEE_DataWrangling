@@ -94,10 +94,10 @@ There is a keyboard shortcut for the pipe so you don't have to type it out each 
 
 #### The pipe
 A children's poem: 
-Little bunny Foo Foo
-Went hopping through the forest
-Scooping up the field mice
-And bopping them on the head
+Little bunny Foo Foo  
+Went hopping through the forest  
+Scooping up the field mice  
+And bopping them on the head  
 
 We could code this poem by nesting each function, which means to understand it we need to read from the inside out. This can get complicated quick!
 ```r

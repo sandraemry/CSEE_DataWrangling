@@ -31,8 +31,7 @@ Verify takes a dataframe and a logical expression, and terminates the pipeline i
 penguins %>%
   verify(!is.na(species)) %>%
   verify(!is.na(sex)) %>% 
-  verify(!is.na(island)) %>% 
-
+  verify(!is.na(island))
 ```
 When we run the code, it prints the dataframe to the console, which tells us there are NAs in the `sex` column. 
 You might notice that only the first two lines of code ran, which is intentional. Verify will terminate the pipeline as soon as there is an error. This is helpful because we can build verify into our pipelines when wrangling data. So we still don't know whether `island` has any NAs. 
@@ -42,7 +41,6 @@ You might notice that only the first two lines of code ran, which is intentional
 ```r
 penguins %>%
   verify(species %in% c("Adelie", "Chinstrap", "Gentoo"))
-
 ```
 2. What about the bill_length_mm column?
 
@@ -57,7 +55,6 @@ penguins %>%
 
 penguins %>%
   verify(body_mass_g >= 2500 & body_mass_g <= 7000)
-
 ```
 
 This time we get an error message. And we know that rows 4 and 272 are the offenders. In this case, these are actually NAs 
@@ -76,7 +73,7 @@ penguins %>%
 penguins %>% 
   assert(within_bounds(0, Inf), flipper_length_mm)
 ```
-### Assert()
+### Assert
 The assert function takes a dataframe, a predicate, and at least one column to apply it to. But you can supply more than 1 column at a time 
 
 We can also check for the same errors with assert()
@@ -106,7 +103,6 @@ For example,
 ```r
 penguins %>%
   verify(nrow(.) > 100)
-
 ```
 
 We can also write our own predicates to use with assert. For example, we can check that bill length is greater than 15 cm
