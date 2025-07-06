@@ -89,10 +89,10 @@ Now we see it's a factor and it sorts properly. This can be very helpful when pl
 
 Now back to penguins...
 
-Before we can wrangle, let's learn what the pipe is all about. There are two pipes in r and you can use either: %>% or  %>% %>% %>% %>%  
+Before we can wrangle, let's learn what the pipe is all about. There are two pipes in r and you can use either: %>% or |>
 There is a keyboard shortcut for the pipe so you don't have to type it out each time, for Macs: Cmd + Shift + M and on windows: Ctrl + Shift + M
 
-############### PIPE ############### 
+#### The pipe
 A children's poem: 
 Little bunny Foo Foo
 Went hopping through the forest
