@@ -11,7 +11,7 @@ If you are using the raw version of the penguins data set, your goal will be to 
 
 For extra practice with validation, download this purposely messy `penguins` dataset and catch and fix the errors: 
 
-<a href="/CSEE_DataWrangling/content/messy_penguins.csv" download style="display: inline-block; padding: 0.5em 1em; background-color: #007ACC; color: white; text-decoration: none; border-radius: 5px;">
+<a href="/CSEE_DataWrangling/content/messy_penguins.csv" download>
   ⬇️ Download messy_penguins.csv
 </a>
 
