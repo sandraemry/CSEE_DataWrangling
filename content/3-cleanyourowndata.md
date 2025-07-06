@@ -11,7 +11,7 @@ If you are using the raw version of the penguins data set, your goal will be to 
 
 For extra practice with validation, download this purposely messy `penguins` dataset and catch and fix the errors: 
 
-<a href="content/data/messy_penguins.csv" download="messy_penguins.csv">
+<a href="content/messy_penguins.csv" download="messy_penguins.csv">
   <button>⬇️ Download messy_penguins.csv</button>
 </a>
 
